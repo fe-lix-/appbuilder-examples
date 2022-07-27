@@ -13,6 +13,7 @@ In Memory is fast as it uses directly the memory of the node application that is
 A good use case for this would be to store a access-token or some short living cache values.
 
 [Deployed Example](https://343284-appbuilderexamples-stage.adobeio-static.net/api/v1/web/appbuilder-examples/state-in-memory)
+
 [Source Code](./actions/handling-state/in-memory.js)
 
 ## AIO Lib State
@@ -21,4 +22,5 @@ AIO Lib State stores the state externally to the application, so it available to
 externally it can be considered long term storage.
 
 [Deployed Example](https://343284-appbuilderexamples-stage.adobeio-static.net/api/v1/web/appbuilder-examples/aio-lib-state-counter )
+
 [Source Code](./actions/handling-state/lib-state.js)
