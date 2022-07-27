@@ -6,22 +6,17 @@ application:
       appbuilder-examples:
         license: Apache-2.0
         actions:
-          generic:
-            function: actions/generic/index.js
+          state-in-memory:
+            function: actions/handling-state/in-memory.js
             web: 'yes'
             runtime: 'nodejs:14'
-            inputs:
-              LOG_LEVEL: debug
             annotations:
-              require-adobe-auth: true
+              require-adobe-auth: false
               final: true
-          publish-events:
-            function: actions/publish-events/index.js
+          aio-lib-state-counter:
+            function: actions/handling-state/lib-state.js
             web: 'yes'
             runtime: 'nodejs:14'
-            inputs:
-              LOG_LEVEL: debug
-              apiKey: $SERVICE_API_KEY
             annotations:
-              require-adobe-auth: true
+              require-adobe-auth: false
               final: true
