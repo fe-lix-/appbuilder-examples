@@ -24,3 +24,9 @@ externally it can be considered long term storage.
 [Deployed Example](https://343284-appbuilderexamples-stage.adobeio-static.net/api/v1/web/appbuilder-examples/aio-lib-state-counter )
 
 [Source Code](./actions/handling-state/lib-state.js)
+
+# Accessisng the Console Workspace name
+
+Using environment variables we can access at build time the content of the `.env` file at the root of the project. This enables us by example to access the complete Runtime Namespace, from which we can gather the project and workspace names.
+
+[Source Code](./src/dx-excshell-1/web-src/src/components/UserProperties.js)
