@@ -9,14 +9,17 @@ application:
           state-in-memory:
             function: actions/handling-state/in-memory.js
             web: 'yes'
-            runtime: 'nodejs:14'
+            runtime: nodejs:14
             annotations:
               require-adobe-auth: false
               final: true
           aio-lib-state-counter:
             function: actions/handling-state/lib-state.js
             web: 'yes'
-            runtime: 'nodejs:14'
+            runtime: nodejs:14
             annotations:
               require-adobe-auth: false
               final: true
+extensions:
+  dx/excshell/1:
+    $include: src/dx-excshell-1/ext.config.yaml
