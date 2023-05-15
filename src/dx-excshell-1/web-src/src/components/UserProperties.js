@@ -5,7 +5,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { Content, Heading, View } from '@adobe/react-spectrum'
-import customConfig from '../config.custom.json'
 import user from '@adobe/exc-app/user'
 
 function UserProperties() { 
@@ -44,7 +43,7 @@ function UserProperties() {
     }, [user]);
 
     function environmentFromAioWorkspace() {
-        const parts = customConfig.workspace.split('-');
+        const parts = process.env.AIO_runtime_namespace.split('-');
         
         return {
             "id": parts[0],
