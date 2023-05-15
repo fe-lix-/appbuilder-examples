@@ -10,6 +10,7 @@ dist
 
 # Config
 config.json
+config.custom.json
 .env*
 .aio
 

@@ -5,6 +5,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { Content, Heading, View } from '@adobe/react-spectrum'
+import customConfig from '../config.custom.json'
 import user from '@adobe/exc-app/user'
 
 function UserProperties() { 
@@ -42,6 +43,18 @@ function UserProperties() {
         }
     }, [user]);
 
+    function environmentFromAioWorkspace() {
+        const parts = customConfig.workspace.split('-');
+        
+        return {
+            "id": parts[0],
+            "project": parts[1],
+            "workspace": parts[2] ? parts[2]: 'Production',
+        }
+    }
+
+    const environment = environmentFromAioWorkspace();
+
     console.log(userProperties)
 
     console.log(Object.keys(userProperties))
@@ -54,6 +67,7 @@ function UserProperties() {
                         {Object.keys(userProperties).map((key, index) => (
                             <tr><td>{key}</td><td><pre>{JSON.stringify(userProperties[key], null, 2)}</pre></td></tr>
                         ))}
+                        <tr><td>Environment</td><td>{JSON.stringify(environment, null, 2)}</td></tr>
                     </tbody>
                 </table>
             </Content>
