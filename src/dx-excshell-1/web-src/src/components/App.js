@@ -10,6 +10,7 @@ import SideBar from './SideBar'
 import ActionsForm from './ActionsForm'
 import { Home } from './Home'
 import { About } from './About'
+import UserProperties from './UserProperties'
 
 function App (props) {
   console.log('runtime object:', props.runtime)
@@ -53,6 +54,9 @@ function App (props) {
                 </Route>
                 <Route path='/about'>
                   <About></About>
+                </Route>
+                <Route path='/user-properties'>
+                  <UserProperties></UserProperties>
                 </Route>
               </Switch>
             </View>
